@@ -1,3 +1,3 @@
 <?php
-    echo 'login test';
+    echo 'login test for wangjingxin';
 ?>
