@@ -1,10 +1,10 @@
-<?php
+ï»¿<?php
 
-define('E_AUTH', 0); // ÓÃ»§Ãû»òÃÜÂë´íÎó
-define('E_ARG', 1); // È±ÉÙ²ÎÊý
-define('E_DB', 2); // Êý¾Ý¿â´íÎó
-define('E_RSTR', 3); // ÊÜÏÞ´íÎó
-define('E_OTHER', 4); // ÆäËü´íÎó
+define('E_AUTH', 0); // ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯
+define('E_ARG', 1); // ç¼ºå°‘å‚æ•°
+define('E_DB', 2); // æ•°æ®åº“é”™è¯¯
+define('E_RSTR', 3); // å—é™é”™è¯¯
+define('E_OTHER', 4); // å…¶å®ƒé”™è¯¯
 define('E_OK',5);//ok
 
 class Info
@@ -13,7 +13,7 @@ class Info
 	var $type;
 	var $info;
 }
-function SendError($info,$type)
+function SendError($type,$info = "error")
 {
 	$errinfo = new info;
 	$errinfo->ok = 'error';
@@ -22,7 +22,7 @@ function SendError($info,$type)
 	die(json_encode($errinfo));
 }
 
-function SendOk($info)
+function SendOk($info = "ok")
 {
 	$okinfo = new Info;
 	$okinfo->ok = 'ok';
