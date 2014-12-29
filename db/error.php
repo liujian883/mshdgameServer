@@ -1,10 +1,10 @@
 <?php
 
-define('E_AUTH', 0); // 用户名或密码错误
-define('E_ARG', 1); // 缺少参数
-define('E_DB', 2); // 数据库错误
-define('E_RSTR', 3); // 受限错误
-define('E_OTHER', 4); // 其它错误
+define('E_AUTH', 0); // ?没?????????????
+define('E_ARG', 1); // 缺?俨???
+define('E_DB', 2); // ???菘?????
+define('E_RSTR', 3); // ???薮???
+define('E_OTHER', 4); // ????????
 define('E_OK',5);//ok
 
 class Info
@@ -13,7 +13,7 @@ class Info
 	var $type;
 	var $info;
 }
-function SendError($type,$info = "error")
+function SendError2($type,$info = "error")
 {
 	$errinfo = new info;
 	$errinfo->ok = 'error';
@@ -22,7 +22,7 @@ function SendError($type,$info = "error")
 	die(json_encode($errinfo));
 }
 
-function SendOk($info = "ok")
+function SendOk2($info = "ok")
 {
 	$okinfo = new Info;
 	$okinfo->ok = 'ok';
