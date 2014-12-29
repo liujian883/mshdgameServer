@@ -3,6 +3,9 @@
 include_once('../db/config.php');
 include_once('../db/log.php');
 
+define('P_Android',1);
+define('P_IOS',2);
+
 class DB {
 	private static $_instance;
 	private function __construct(){
@@ -196,17 +199,17 @@ class DB {
             if($pf == null && !isset($_SESSION['platform'])) {
                 sendError("relogin");
             } else if ($pf == null) {
-                if((int)$_SESSION["platform"] == 1) {
+                if((int)$_SESSION["platform"] == P_Android) {
                     $dbname = $_config['mysql_dbname'];
-                }else if((int)$_SESSION["platform"] == 2) {
+                }else if((int)$_SESSION["platform"] == P_IOS) {
                     $dbname = $_config['mysql_dbname']."_ios";
                 }else {
                     sendError("relogin");
                 }
             }else {
-                if($pf == 1) {
+                if($pf == P_Android) {
                     $dbname = $_config['mysql_dbname'];
-                }else if($pf == 2) {
+                }else if($pf == P_IOS) {
                     $dbname = $_config['mysql_dbname']."_ios";
                 }else {
                     sendError("relogin");

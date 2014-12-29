@@ -10,7 +10,7 @@ include_once ('../db/error.php');
         && $_POST["pwd"] != '')
    {
        $username = $_POST['userName'];
-       $result = $db->select2('userID','*',"userName = '".$_POST['userName']."'",false,1);
+       $result = $db->select2('userID','*',"userName = '".$_POST['userName']."'",false,P_Android);
        if($result)
         {
            SendError2(E_AUTH,"The Same Name");

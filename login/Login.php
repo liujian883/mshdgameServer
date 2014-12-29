@@ -10,7 +10,7 @@ include_once ('../db/db.php');
         && isset($_POST["pwd"])
         && $_POST["pwd"] != '')
     {
-        $result = $db->select2('userID','pwd',"userName = '".$_POST['userName']."'",false,1);
+        $result = $db->select2('userID','pwd',"userName = '".$_POST['userName']."'",false,P_Android);
         if(strcmp($result[0]["pwd"],$_POST["pwd"]) == 0)
         {
             SendOk2();
