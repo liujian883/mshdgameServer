@@ -3,7 +3,7 @@
 include_once ('../db/db.php');
 //include_once ('../db/error.php');
 $db = DB::getInstance();
-$db->init_db(1);
+$db->init_db(P_Android);
 //echo " DbTest ";
 echo date('H:i:s').PHP_EOL;
 mysql_query("BEGIN");
