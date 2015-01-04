@@ -9,8 +9,9 @@ echo date('H:i:s').PHP_EOL;
 mysql_query("BEGIN");
 $newUser = array();
 
-for($i=1;$i<4000001;$i++)
+for($i=1;$i<200001;$i++)
 {
+     $newUser['userID'] = "'".$i."'";
      $newUser['pwd'] = "'".$i."'";
      $newUser['userName'] = "'".$i."'";
      //echo " $i ";
