@@ -5,8 +5,10 @@ $_config['mysql_host'] = 'localhost';
 $_config['mysql_user'] = 'root'; // ???ݿ??û???
 $_config['mysql_password'] = 'miaosuhudong2014'; // ???ݿ?????
 $_config['mysql_dbname'] = 'babyplan'; // ???ݿ???
-$_config['babyplan'] = array('mysql_host'=>'localhost','mysql_user'=>'root','mysql_password'=>'miaosuhudong2014','mysql_dbname'=>'babyplan');
-$_config['babyplanID'] = array('mysql_host'=>'localhost','mysql_user'=>'root','mysql_password'=>'miaosuhudong2014','mysql_dbname'=>'babyplanID');
+$_config['db'] = array('babyplan'=>array('mysql_host'=>'localhost','mysql_user'=>'root','mysql_password'=>'miaosuhudong2014', 'mysql_dbname'=>'babyplan'),
+                       'babyplanID'=> array('mysql_host'=>'localhost','mysql_user'=>'root','mysql_password'=>'miaosuhudong2014','mysql_dbname'=>'babyplanID'));
+//$_config['babyplan'] = array('mysql_host'=>'localhost','mysql_user'=>'root','mysql_password'=>'miaosuhudong2014','mysql_dbname'=>'babyplan');
+//$_config['babyplanID'] = array('mysql_host'=>'localhost','mysql_user'=>'root','mysql_password'=>'miaosuhudong2014','mysql_dbname'=>'babyplanID');
 
 $_config['server'] = array('1'=>'42.62.14.109','2'=>'42.62.14.110');
 // openapi
