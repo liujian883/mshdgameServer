@@ -4,6 +4,7 @@ include_once '../db/error.php';
 include_once ('../db/db2.php');
 //include_once ('../db/error.php');
 
+  global $_config;
   $db = new DB2('babyplanID');
    if (isset($_POST["userName"]) 
         && $_POST["userName"] != ''
@@ -13,7 +14,7 @@ include_once ('../db/db2.php');
         $result = $db->select2('userID','pwd',"userName = '".$_POST['userName']."'",false,P_Android);
         if(strcmp($result[0]["pwd"],$_POST["pwd"]) == 0)
         {
-            SendOk2();
+            SendOk2($_config['server']);
         }
         else
         {
