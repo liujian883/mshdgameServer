@@ -1,10 +1,10 @@
 <?php
 
 include_once '../db/error.php';
-include_once ('../db/db.php');
+include_once ('../db/db2.php');
 //include_once ('../db/error.php');
 
-  $db = DB::getInstance();
+  $db = new DB2('babyplanID');
    if (isset($_POST["userName"]) 
         && $_POST["userName"] != ''
         && isset($_POST["pwd"])
