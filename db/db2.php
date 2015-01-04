@@ -188,12 +188,12 @@ class DB2 {
 		global $_config;
         if(!$this->inited) {
           //  if(!in_array($_config["$this->dbname"]['mysql_host']) || !in_array($_config["$this->dbname"]['mysql_user']) ||!in_array["$this->dbname"]['mysql_password'])
-            if(!array_key_exists("$this->dbname",$_config))
+            if(!array_key_exists("$this->dbname",$_config['db']))
             {
                 sendError('db not exist',null,true);
                 return;
             }
-			$this->connection = mysql_connect($_config["$this->dbname"]['mysql_host'],$_config["$this->dbname"]['mysql_user'],$_config["$this->dbname"]['mysql_password']);
+			$this->connection = mysql_connect($_config['db']["$this->dbname"]['mysql_host'],$_config['db']["$this->dbname"]['mysql_user'],$_config['db']["$this->dbname"]['mysql_password']);
 			if(!$this->connection) {
 				sendError('Cannot connect to mysql: '. mysql_error());
 			}
@@ -202,17 +202,17 @@ class DB2 {
                 sendError("relogin");
             } else if ($pf == null) {
                 if((int)$_SESSION["platform"] == P_Android) {
-                    $dbname = $_config["$this->dbname"]['mysql_dbname'];
+                    $dbname = $_config['db']["$this->dbname"]['mysql_dbname'];
                 }else if((int)$_SESSION["platform"] == P_IOS) {
-                    $dbname = $_config["$this->dbname"]['mysql_dbname']."_ios";
+                    $dbname = $_config['db']["$this->dbname"]['mysql_dbname']."_ios";
                 }else {
                     sendError("relogin");
                 }
             }else {
                 if($pf == P_Android) {
-                    $dbname = $_config["$this->dbname"]['mysql_dbname'];
+                    $dbname = $_config['db']["$this->dbname"]['mysql_dbname'];
                 }else if($pf == P_IOS) {
-                    $dbname = $_config["$this->dbname"]['mysql_dbname']."_ios";
+                    $dbname = $_config['db']["$this->dbname"]['mysql_dbname']."_ios";
                 }else {
                     sendError("relogin");
                 }
