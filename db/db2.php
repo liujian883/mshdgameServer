@@ -3,8 +3,8 @@
 include_once('../db/config.php');
 include_once('../db/log.php');
 
-define('P_Android',1);
-define('P_IOS',2);
+//define('P_Android',1);
+//define('P_IOS',2);
 
 class DB2 {
 
@@ -186,7 +186,13 @@ class DB2 {
 
 	public function init_db($pf = null) {
 		global $_config;
-		if(!$this->inited) {
+        if(!$this->inited) {
+          //  if(!in_array($_config["$this->dbname"]['mysql_host']) || !in_array($_config["$this->dbname"]['mysql_user']) ||!in_array["$this->dbname"]['mysql_password'])
+            if(!in_array("$this->dbname",$_config))
+            {
+                sendError('db not exist',null,true);
+                return;
+            }
 			$this->connection = mysql_connect($_config["$this->dbname"]['mysql_host'],$_config["$this->dbname"]['mysql_user'],$_config["$this->dbname"]['mysql_password']);
 			if(!$this->connection) {
 				sendError('Cannot connect to mysql: '. mysql_error());
