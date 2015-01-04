@@ -188,7 +188,7 @@ class DB2 {
 		global $_config;
         if(!$this->inited) {
           //  if(!in_array($_config["$this->dbname"]['mysql_host']) || !in_array($_config["$this->dbname"]['mysql_user']) ||!in_array["$this->dbname"]['mysql_password'])
-            if(!in_array("$this->dbname",$_config))
+            if(!array_key_exists("$this->dbname",$_config))
             {
                 sendError('db not exist',null,true);
                 return;
