@@ -17,7 +17,8 @@ include_once ('../db/db2.php');
         if(strcmp($result[0]["pwd"],$_POST["pwd"]) == 0)
         {
             $userID = $db->select2('userID','userID',"userName = '".$_POST['userName']."'",false,P_Android);
-            $_SESSION['userID'] = $userID;
+            $_SESSION['userID'] = $userID[0]['userID'];
+            $_SESSION['userName'] = $_POST['userName'];
             SendOk2($_config['server']);
         }
         else
