@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once '../db/error.php';
+include_once ('../db/mem.php');
 
     function checkUser()
     {
@@ -10,7 +11,15 @@ include_once '../db/error.php';
         }
         else
         {
-            return $_SESSION['userID'];
+            $sessionID = mem::getInstance()->mcGet("mshd-".$_SESSION['userID']);
+            if( $sessionID == session_id() )
+            {
+                 return $_SESSION['userID'];
+            }
+            else
+            {
+                 SendError2(E_AUTH,"SESSION TIMEOUT");
+            }
         } 
     }
 
