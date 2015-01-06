@@ -37,8 +37,15 @@ class DB2 {
 				$ret[] = $row;
 			}
 			mysql_free_result($result);
-			if(count($ret) > 0) {
-				return $ret;
+            if(count($ret) > 0) {
+                if($limit1)
+                {
+                    return $ret[0];
+                }
+                else
+                {
+				    return $ret;
+                }
 			}
 		}else {
 			//$this->close_db();
@@ -248,7 +255,9 @@ class DB2 {
 		if($this->in_transaction) {
 			mysql_query('rollback;');
 			$this->in_transaction = false;
-		}
+        }
+//        echo 'aaa';
+  //      var_dump($this->connection);
 		mysql_close($this->connection);
 		$this->inited = false;
 	}
