@@ -11,7 +11,7 @@ include_once 'checkUser.php';
     if($result)
     {
         $userInfo = array();
-        $userInfo['userName'] = "'".$result[0]['userName']."'";
+        $userInfo['userName'] = $result[0]['userName'];
         $userInfo['userGold'] = $result[0]['userGold'];
         $userInfo['userLevel'] = $result[0]['userLevel'];
         $userInfo['userEXP'] = $result[0]['userEXP'];
@@ -111,7 +111,7 @@ include_once 'checkUser.php';
         if($Info)
         {
             $Info = array();
-            $Info['userName'] = "'".$result[0]['userName']."'";
+            $Info['userName'] = $result[0]['userName'];
             $Info['userGold'] = $result[0]['userGold'];
             $Info['userLevel'] = $result[0]['userLevel'];
             $Info['userEXP'] = $result[0]['userEXP'];
