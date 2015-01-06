@@ -110,14 +110,14 @@ include_once 'checkUser.php';
         $Info = $db->select2('userInfo','*',"userID = '".$userID."'",false,P_Android);
         if($Info)
         {
-            $Info = array();
-            $Info['userName'] = $result[0]['userName'];
-            $Info['userGold'] = $result[0]['userGold'];
-            $Info['userLevel'] = $result[0]['userLevel'];
-            $Info['userEXP'] = $result[0]['userEXP'];
-            $Info['userPower'] = $result[0]['userPower'];
-            $Info['userDiamond'] = $result[0]['userDiamond'];
-            SendOk2($Info);
+            $uInfo = array();
+            $uInfo['userName'] = $Info[0]['userName'];
+            $uInfo['userGold'] = $Info[0]['userGold'];
+            $uInfo['userLevel'] = $Info[0]['userLevel'];
+            $uInfo['userEXP'] = $Info[0]['userEXP'];
+            $uInfo['userPower'] = $Info[0]['userPower'];
+            $uInfo['userDiamond'] = $Info[0]['userDiamond'];
+            SendOk2($uInfo);
         }
         else
         {
