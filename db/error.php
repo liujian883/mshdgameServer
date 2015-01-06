@@ -17,8 +17,10 @@ function SendError2($type,$info = "error")
 {
 	$errinfo = new info;
 	$errinfo->ok = 'error';
-	$errinfo->info = $info;
-	$errinfo->type = $type;
+	//$errinfo->info = $info;
+    $errinfo->type = $type;
+    $errorinfo = getBacktrace();
+    $errinfo->info = $info.",errorinfo:$errorinfo";
 	die(json_encode($errinfo));
 }
 
@@ -29,4 +31,11 @@ function SendOk2($info = "ok")
 	$okinfo->info = $info;
 	$okinfo->type = E_OK;
 	echo json_encode($okinfo);
+}
+
+function getBacktrace()
+{
+    ob_start();
+    debug_print_backtrace();
+    return ob_get_clean();
 }
