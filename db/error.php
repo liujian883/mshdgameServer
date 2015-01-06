@@ -1,11 +1,12 @@
 <?php
 
-define('E_AUTH', 0); // ?û?????????????
-define('E_ARG', 1); // ȱ?ٲ???
-define('E_DB', 2); // ???ݿ?????
-define('E_RSTR', 3); // ???޴???
-define('E_OTHER', 4); // ????????
+define('E_AUTH', 0); // login error 
+define('E_ARG', 1); // parament error
+define('E_DB', 2); // DB error
+define('E_RSTR', 3); // 
+define('E_OTHER', 4); // 
 define('E_OK',5);//ok
+define('E_MEM',6);// memcache error
 
 class Info
 {
