@@ -10,8 +10,15 @@ include_once 'checkUser.php';
     $result = $db->select2('userInfo','*',"userID = '".$userID."'",false,P_Android);
     if($result)
     {
+        $userInfo = array();
+        $userInfo['userName'] = $result[0]['userName'];
+        $userInfo['userGold'] = $result[0]['userGold'];
+        $userInfo['userLevel'] = $result[0]['userLevel'];
+        $userInfo['userEXP'] = $result[0]['userEXP'];
+        $userInfo['userPower'] = $result[0]['userPower'];
+        $userInfo['userDiamond'] = $result[0]['userDiamond'];
         //...存在  
-        SendOk2(); 
+        SendOk2($userInfo); 
     }
     else
     {
@@ -100,6 +107,22 @@ include_once 'checkUser.php';
    
         $db->commit_transaction();
         //插入成功后返回userInfo表中的数据   
-        SendOk2();
+        $Info = $db->select2('userInfo','*',"userID = '".$userID."'",false,P_Android);
+        if($Info)
+        {
+            $uInfo = array();
+            $uInfo['userName'] = $Info[0]['userName'];
+            $uInfo['userGold'] = $Info[0]['userGold'];
+            $uInfo['userLevel'] = $Info[0]['userLevel'];
+            $uInfo['userEXP'] = $Info[0]['userEXP'];
+            $uInfo['userPower'] = $Info[0]['userPower'];
+            $uInfo['userDiamond'] = $Info[0]['userDiamond']; 
+            SendOk2($uInfo); 
+        
+        }
+        else
+        {
+            SendError2(E_AUTH,"after insert No data");
+        }
     }
 ?>
