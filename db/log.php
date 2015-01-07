@@ -1,6 +1,6 @@
 <?php
 
-include_once('../db/db.php');
+include_once('../db/db2.php');
 
 function log_error($info) {
 	//echo 'Error: '.$info.PHP_EOL;
