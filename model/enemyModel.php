@@ -1,5 +1,5 @@
 ﻿<?php
-include_once '../model/entitymodel.php';
+include_once '../model/entityModel.php';
 
 class enemymodel extends entitymodel
 {

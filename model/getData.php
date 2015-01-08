@@ -1,6 +1,6 @@
 <?php
-include_once '../model/enemymodel.php';
-include_once '../model/petmodel.php';
+include_once '../model/enemyModel.php';
+include_once '../model/petModel.php';
 
 //echo $_POST['type'];
 //die("xx");
