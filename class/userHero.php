@@ -52,7 +52,7 @@ class userHero
             SendError2(E_AUTH,"No data as this id");
         }
 
-
+    }
     static function setHeroLevel($db,$id,$heroLevel) 
     {
         $heroInfo = array();

@@ -14,3 +14,6 @@ $_config['server'] = array('1'=>'42.62.14.109','2'=>'42.62.14.110');
 // memcache
 $_config['memcache'] = array('host'=>'10.6.14.167','port'=>'11211');
 
+// tableConst
+$_config['table'] = array('userPet'=>4,'userProps'=>2,'userEquipment'=>6);
+
