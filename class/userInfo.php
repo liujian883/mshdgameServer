@@ -29,13 +29,13 @@ class userInfo
         {
              SendError2(E_DB,"Cannot get userGold from userInfo table userID = ");
         }
-        return (int)$userGold["userGold"];
+        return (int)$userGold['userGold'];
     }
 
     static function setUserGold($db,$userID,$userGold) 
     {
         $userInfo = array();
-        $userInfo["userGold"] = $userGold;
+        $userInfo['userGold'] = $userGold;
         $db->update2('userInfo',$userInfo,"userID = '".$userID."'",false,false);
     }
 
@@ -52,13 +52,13 @@ class userInfo
         {
              SendError2(E_DB,"Cannot get userLevel from userInfo table userID = ");
         }
-        return (int)$userLevel["userLevel"];
+        return (int)$userLevel['userLevel'];
     }
 
     static function setUserLevel($db,$userID,$userLevel) 
     {
         $userInfo = array();
-        $userInfo["userLevel"] = $userLevel;
+        $userInfo['userLevel'] = $userLevel;
         $db->update2('userInfo',$userInfo,"userID = '".$userID."'",false,false);
     }
 
@@ -87,7 +87,7 @@ class userInfo
     static function setUserEXP($db,$userID,$userEXP) 
     {
         $userInfo = array();
-        $userInfo["userEXP"] = $userEXP;
+        $userInfo['userEXP'] = $userEXP;
         $db->update2('userInfo',$userInfo,"userID = '".$userID."'",false,false);
     }
     
@@ -104,13 +104,13 @@ class userInfo
         {
              SendError2(E_DB,"Cannot get userPower from userInfo table userID = ");
         }
-        return (int)$userPower["userPower"];
+        return (int)$userPower['userPower'];
     }
 
     static function setUserPower($db,$userID,$userPower) 
     {
         $userInfo = array();
-        $userInfo["userPower"] = $userPower;
+        $userInfo['userPower'] = $userPower;
         $db->update2('userInfo',$userInfo,"userID = '".$userID."'",false,false);
     }
 
@@ -127,13 +127,13 @@ class userInfo
         {
              SendError2(E_DB,"Cannot get userDiamond from userInfo table userID = ");
         }
-        return (int)$userDiamond["userDiamond"];
+        return (int)$userDiamond['userDiamond'];
     }
 
     static function setUserDiamond($db,$userID,$userDiamond) 
     {
         $userInfo = array();
-        $userInfo["userDiamond"] = $userDiamond;
+        $userInfo['userDiamond'] = $userDiamond;
         $db->update2('userInfo',$userInfo,"userID = '".$userID."'",false,false);
     }
     
@@ -150,13 +150,13 @@ class userInfo
         {
              SendError2(E_DB,"Cannot get numberOfPassLevel from userInfo table userID = ");
         }
-        return (int)$numberOfPassLevel["numberOfPassLevel"];
+        return (int)$numberOfPassLevel['numberOfPassLevel'];
     }
 
     static function setNumberOfPassLevel($db,$userID,$numberOfPassLevel) 
     {
         $userInfo = array();
-        $userInfo["numberOfPassLevel"] = $numberOfPassLevel;
+        $userInfo['numberOfPassLevel'] = $numberOfPassLevel;
         $db->update2('userInfo',$userInfo,"userID = '".$userID."'",false,false);
     }
 
