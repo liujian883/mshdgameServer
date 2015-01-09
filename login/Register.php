@@ -18,6 +18,7 @@ include_once '../db/config.php';
        }
        else
        {
+            $db->start_transaction();
             $newUserName = array();
             $newUserName['userName'] = "'".$_POST['userName']."'";
             $newUserID = $db->insert2('babyplanID.gitUserID',$newUserName,true);
@@ -92,6 +93,7 @@ include_once '../db/config.php';
                 $newUser['userName'] = "'".$_POST['userName']."'";
                 $userID = $db->insert2('babyplanID.userID9',$newUser,true);
             }
+            $db->commit_transaction();
             SendOk2();
        } 
     }
