@@ -1,0 +1,100 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CreateRandomStr	randomStr.php	/^    static public function CreateRandomStr()$/;"	f
+addEquipmentLevel	userEquipment.php	/^    static function addEquipmentLevel($db,$id,$equipmentLevel) $/;"	f
+addHeroLevel	userHero.php	/^    static function addHeroLevel($db,$id,$heroLevel) $/;"	f
+addNumberOfPassLevel	userInfo.php	/^    static function addNumberOfPassLevel($db,$userID,$numberOfPassLevel) $/;"	f
+addPetLevel	userPet.php	/^    static function addPetLevel($db,$id,$petLevel) $/;"	f
+addPropsNumber	userProps.php	/^    static function addPropsNumber($db,$id,$propsNumber) $/;"	f
+addUserDiamond	userInfo.php	/^    static function addUserDiamond($db,$userID,$userDiamond) $/;"	f
+addUserEXP	userInfo.php	/^    static function addUserEXP($db,$userID,$userEXP) $/;"	f
+addUserGold	userInfo.php	/^    static function addUserGold($db,$userID,$userGold) $/;"	f
+addUserLevel	userInfo.php	/^    static function addUserLevel($db,$userID,$userLevel) $/;"	f
+addUserPower	userInfo.php	/^    static function addUserPower($db,$userID,$userPower) $/;"	f
+equipmentInfo	userEquipment.php	/^        $equipmentInfo = $db->select2("userEquipment".$tableNumber,'*',"userID = '".$id."'",true,P_Android);$/;"	v
+equipmentInfo	userEquipment.php	/^        $equipmentInfo = array();$/;"	v
+getAllInfo	userEquipment.php	/^    static function getAllInfo($db,$id)$/;"	f
+getAllInfo	userHero.php	/^    static function getAllInfo($db,$id)$/;"	f
+getAllInfo	userPet.php	/^    static function getAllInfo($db,$id)$/;"	f
+getAllInfo	userProps.php	/^    static function getAllInfo($db,$id)$/;"	f
+getAllUserInfo	userInfo.php	/^    static function getAllUserInfo($db,$userID) $/;"	f
+getEquipmentID	userEquipment.php	/^    static function getEquipmentID($db,$id)$/;"	f
+getEquipmentLevel	userEquipment.php	/^    static function getEquipmentLevel($db,$id)$/;"	f
+getHeroID	userHero.php	/^    static function getHeroID($db,$id)$/;"	f
+getHeroLevel	userHero.php	/^    static function getHeroLevel($db,$id)$/;"	f
+getNumberOfPassLevel	userInfo.php	/^    static function getNumberOfPassLevel($db,$userID) $/;"	f
+getPetID	userPet.php	/^    static function getPetID($db,$id)$/;"	f
+getPetLevel	userPet.php	/^    static function getPetLevel($db,$id)$/;"	f
+getPropsID	userProps.php	/^    static function getPropsID($db,$id)$/;"	f
+getPropsNumber	userProps.php	/^    static function getPropsNumber($db,$id)$/;"	f
+getUseItOrNot	userEquipment.php	/^    static function getUseItOrNot($db,$id)$/;"	f
+getUseItOrNot	userHero.php	/^    static function getUseItOrNot($db,$id)$/;"	f
+getUseItOrNot	userPet.php	/^    static function getUseItOrNot($db,$id)$/;"	f
+getUserDiamond	userInfo.php	/^    static function getUserDiamond($db,$userID) $/;"	f
+getUserEXP	userInfo.php	/^    static function getUserEXP($db,$userID) $/;"	f
+getUserGold	userInfo.php	/^    static function getUserGold($db,$userID) $/;"	f
+getUserLevel	userInfo.php	/^    static function getUserLevel($db,$userID) $/;"	f
+getUserPower	userInfo.php	/^    static function getUserPower($db,$userID) $/;"	f
+heroInfo	userHero.php	/^        $heroInfo = array();$/;"	v
+ip	randomStr.php	/^        $ip = $_SERVER["REMOTE_ADDR"];$/;"	v
+numberOfPassLevel	userInfo.php	/^        $numberOfPassLevel = $db->select2('userInfo','numberOfPassLevel',"userID = '".$userID."'",true,P_Android);$/;"	v
+petInfo	userPet.php	/^        $petInfo = array();$/;"	v
+port	randomStr.php	/^        $port = $_SERVER["REMOTE_PORT"];$/;"	v
+propsInfo	userProps.php	/^        $propsInfo = array();$/;"	v
+propsInfo	userProps.php	/^        $propsInfo =$db->select2('userProps'.$tableNumber,'*',"userID = '".$id."'",true,P_Android);$/;"	v
+ranNum	randomStr.php	/^        $ranNum = mt_rand(1,10000);$/;"	v
+randomStr	randomStr.php	/^class randomStr$/;"	c
+result	userEquipment.php	/^        $result = $db->select2("userEquipment".$tableNumber,'equipmentID',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userEquipment.php	/^        $result = $db->select2('userEquipment'.$tableNumber,'useItOrNot',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userEquipment.php	/^        $result = $db->select2('userEquipment5','equipmentLevel',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userHero.php	/^        $result = $db->select2('userHero','*',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userHero.php	/^        $result = $db->select2('userHero','heroID',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userHero.php	/^        $result = $db->select2('userHero','heroLevel',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userHero.php	/^        $result = $db->select2('userHero','useItOrNot',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userPet.php	/^        $result = $db->select2('userPet'.$tableNumber,'*',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userPet.php	/^        $result = $db->select2('userPet'.$tableNumber,'petID',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userPet.php	/^        $result = $db->select2('userPet'.$tableNumber,'petLevel',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userPet.php	/^        $result = $db->select2('userPet'.$tableNumber,'useItOrNot',"userID = '".$id."'",true,P_Android);$/;"	v
+result	userProps.php	/^        $result = $db->select2('userProps'.$tableNumber,'propsID',"userID = '".$id."'",true,P_Android); $/;"	v
+result	userProps.php	/^        $result = $db->select2('userProps'.$tableNumber,'propsNumber',"userID = '".$id."'",true,P_Android);$/;"	v
+resultStr	randomStr.php	/^        $resultStr = "'".$ip.$port.$time.$ranNum."'";$/;"	v
+setAllInfo	userEquipment.php	/^    static function setAllInfo($db,$array)$/;"	f
+setAllInfo	userHero.php	/^    static function setAllInfo($db,$array)$/;"	f
+setAllInfo	userPet.php	/^    static function setAllInfo($db,$array)$/;"	f
+setAllInfo	userProps.php	/^    static function setAllInfo($db,$array)$/;"	f
+setAllUserInfo	userInfo.php	/^    static function setAllUserInfo($db,$array)$/;"	f
+setEquipmentLevel	userEquipment.php	/^    static function setEquipmentLevel($db,$id,$equipmentLevel) $/;"	f
+setHeroLevel	userHero.php	/^    static function setHeroLevel($db,$id,$heroLevel) $/;"	f
+setNumberOfPassLevel	userInfo.php	/^    static function setNumberOfPassLevel($db,$userID,$numberOfPassLevel) $/;"	f
+setPetLevel	userPet.php	/^    static function setPetLevel($db,$id,$petLevel) $/;"	f
+setPropsNumber	userProps.php	/^    static function setPropsNumber($db,$id,$propsNumber) $/;"	f
+setUseItOrNot	userEquipment.php	/^    static function setUseItOrNot($db,$id,$useItOrNot) $/;"	f
+setUseItOrNot	userHero.php	/^    static function setUseItOrNot($db,$id,$useItOrNot) $/;"	f
+setUseItOrNot	userPet.php	/^    static function setUseItOrNot($db,$id,$useItOrNot) $/;"	f
+setUserDiamond	userInfo.php	/^    static function setUserDiamond($db,$userID,$userDiamond) $/;"	f
+setUserEXP	userInfo.php	/^    static function setUserEXP($db,$userID,$userEXP) $/;"	f
+setUserGold	userInfo.php	/^    static function setUserGold($db,$userID,$userGold) $/;"	f
+setUserLevel	userInfo.php	/^    static function setUserLevel($db,$userID,$userLevel) $/;"	f
+setUserPower	userInfo.php	/^    static function setUserPower($db,$userID,$userPower) $/;"	f
+tableNumber	userEquipment.php	/^        $tableNumber = $id % $_config['table']['userEquipment'];$/;"	v
+tableNumber	userPet.php	/^        $tableNumber = $array['userID'] % $_config['table']['userPet'];$/;"	v
+tableNumber	userPet.php	/^        $tableNumber = $id % $_config['table']['userPet'];$/;"	v
+tableNumber	userProps.php	/^        $tableNumber = $array['userID'] % $_config['table']['userProps'];$/;"	v
+tableNumber	userProps.php	/^        $tableNumber = $id % $_config['table']['userProps'];$/;"	v
+time	randomStr.php	/^        $time = date(time());$/;"	v
+userDiamond	userInfo.php	/^        $userDiamond = $db->select2('userInfo','userDiamond',"userID = '".$userID."'",true,P_Android);$/;"	v
+userEXP	userInfo.php	/^        $userEXP = $db->select2('userInfo','userEXP',"userID = '".$userID."'",true,P_Android);$/;"	v
+userEquipment	userEquipment.php	/^class userEquipment$/;"	c
+userGold	userInfo.php	/^        $userGold = $db->select2('userInfo','userGold',"userID = '".$userID."'",true,P_Android);$/;"	v
+userHero	userHero.php	/^class userHero$/;"	c
+userInfo	userInfo.php	/^        $userInfo = $db->select2('userInfo','*',"userID = '".$userID."'",true,P_Android);$/;"	v
+userInfo	userInfo.php	/^        $userInfo = array();$/;"	v
+userInfo	userInfo.php	/^class userInfo$/;"	c
+userLevel	userInfo.php	/^        $userLevel = $db->select2('userInfo','userLevel',"userID = '".$userID."'",true,P_Android);$/;"	v
+userPet	userPet.php	/^class userPet$/;"	c
+userPower	userInfo.php	/^        $userPower = $db->select2('userInfo','userPower',"userID = '".$userID."'",true,P_Android);$/;"	v
+userProps	userProps.php	/^class userProps$/;"	c

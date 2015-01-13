@@ -1,6 +1,6 @@
 <?php
-
-class RandomStr
+include_once ('../db/mem.php');
+class randomStr
 {
     static public function CreateRandomStr()
     {
@@ -9,6 +9,7 @@ class RandomStr
         $time = date(time());
         $ranNum = mt_rand(1,10000);
         $resultStr = "'".$ip.$port.$time.$ranNum."'";
+        mem::getInstance()->mcSet("mshd-".$resultStr,"LevelRequest",1200);
         return $resultStr;
     }
 
