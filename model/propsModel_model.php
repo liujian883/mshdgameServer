@@ -317,4 +317,8 @@ class propsModelModel {
 		$this->defenceCircle = self::$data[$id]['defenceCircle'];
 		$this->light = self::$data[$id]['light'];
 	}
+
+	public static function GetData($id,$field) {
+		return self::$data[$id][$field];
+	}
 }

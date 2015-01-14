@@ -80,6 +80,11 @@ function tableToClass($tableName,$tableInfo)
     
     fwrite($fp,"\tpublic static \$data = array(".PHP_EOL);
     $data = $db->select2($tableName,"*",null,false,P_Android);
+    if(!$data)
+    {
+        echo "the $tableName is no data".PHP_EOL;
+        return;
+    }
     foreach($data as $line)
     {
         fwrite($fp,"\t\t".$line[$tableInfo->primaryKey]."=>array(".PHP_EOL);
@@ -124,6 +129,14 @@ function tableToClass($tableName,$tableInfo)
     {
         fwrite($fp,"\t}".PHP_EOL);
     }
+
+    if(count($eles) > 0)
+    {
+        fwrite($fp,PHP_EOL."\tpublic static function GetData(\$id,\$field) {".PHP_EOL);    
+        fwrite($fp,"\t\treturn self::\$data[\$id][\$field];");
+        fwrite($fp,PHP_EOL."\t}".PHP_EOL);
+    }
+
     fwrite($fp,"}".PHP_EOL);
     fclose($fp);
 }
@@ -152,6 +165,7 @@ function tableToClassTwoParam($tableName,$tableInfo)
     $data = $db->select2($tableName,"*",null,false,P_Android);
     if(!$data)
     {
+        echo "the $tableName is no data".PHP_EOL;
         return;
     }
     foreach($data as $line)
@@ -208,6 +222,15 @@ function tableToClassTwoParam($tableName,$tableInfo)
     {
         fwrite($fp,"\t}".PHP_EOL);
     }
+
+    if(count($eles) > 0)
+    {
+        fwrite($fp,PHP_EOL."\tpublic static function GetData(\$id,\$level,\$field) {".PHP_EOL);    
+        fwrite($fp,"\t\treturn self::\$data[\$level.'+'.\$id][\$field];");
+        fwrite($fp,PHP_EOL."\t}".PHP_EOL);
+    }
+    
+    
     fwrite($fp,"}".PHP_EOL);
     fclose($fp);
 }

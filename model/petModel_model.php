@@ -127,4 +127,8 @@ class petModelModel {
 		$this->find2EnemySpeed = self::$data[$id.'+'.$level]['find2EnemySpeed'];
 		$this->run2EnemySpeed = self::$data[$id.'+'.$level]['run2EnemySpeed'];
 	}
+
+	public static function GetData($id,$level,$field) {
+		return self::$data[$level.'+'.$id][$field];
+	}
 }

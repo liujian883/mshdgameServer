@@ -371,4 +371,8 @@ class enemyModelModel {
 		$this->escapeNearestDistance = self::$data[$id.'+'.$level]['escapeNearestDistance'];
 		$this->escapeFarestDistance = self::$data[$id.'+'.$level]['escapeFarestDistance'];
 	}
+
+	public static function GetData($id,$level,$field) {
+		return self::$data[$level.'+'.$id][$field];
+	}
 }

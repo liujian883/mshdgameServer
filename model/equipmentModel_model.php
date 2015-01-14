@@ -357,4 +357,8 @@ class equipmentModelModel {
 		$this->upNmuberAddType = self::$data[$id]['upNmuberAddType'];
 		$this->upNumber = self::$data[$id]['upNumber'];
 	}
+
+	public static function GetData($id,$field) {
+		return self::$data[$id][$field];
+	}
 }
