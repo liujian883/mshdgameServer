@@ -22,5 +22,25 @@ include_once ('../db/mem.php');
             }
         } 
     }
+    function checkUser2($sessionid)
+    {
+        $session = mem::getInstance()->mcGet($sessionid);
+        if($session !== false)
+        {
+            if(session_decode($session))
+            {
+                return $_SESSION['userID'];
+            }
+            else
+            {
+                SendError2(E_AUTH,"SESSION Decode False");
+            }
+        }
+        else
+        {
+            SendError2(E_AUTH,"SESSION TIMEOUT");
+        }
+         
+    }
 
 ?>
