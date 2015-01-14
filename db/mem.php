@@ -19,7 +19,7 @@ class mem
     private function __construct()
     {
         global $_config;
-        $this->conn = new Memcache;
+        $this->conn = new Memcached;
         
         if (!$this->conn->addServer($_config['memcache']['host'], $_config['memcache']['port']))
         {
@@ -27,18 +27,26 @@ class mem
         }
     }
 
-    public function mcSet($key, $value, $lifetime=30)
+    public function mcSet($key, $value, $lifetime=30,&$cas=null)
     {
-        $ret = $this->conn->set($key, $value, $lifetime);
+        $ret = null;
+        if($cas == null)
+        {
+            $ret = $this->conn->set($key, $value, $lifetime); 
+        }
+        else
+        {
+            $ret = $this->conn->cas($cas, $key, $value, $lifetime);
+        }
         if ($ret === false)
         {
             SendError2(E_MEM, "set $key $value error");
         }
     }
 
-    public function mcGet($key)
+    public function mcGet($key,&$cas=null)
     {
-        return $this->conn->get($key);
+        return $this->conn->get($key,null,$cas);
     }
 
     public function mcDel($key)
