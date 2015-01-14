@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include_once ('../db/db2.php');
 include_once ('../db/error.php');
 include_once '../db/config.php';
@@ -7,6 +8,7 @@ include_once 'checkUser.php';
 
     $db = new DB2('babyplan');
     $userID = checkUser();
+    $_SESSION['ServerIP'] = $_POST['ServerIP'];
     $result = $db->select2('userInfo','*',"userID = '".$userID."'",false,P_Android);
     if($result)
     {

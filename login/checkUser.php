@@ -18,7 +18,7 @@ include_once ('../db/mem.php');
             }
             else
             {
-                 SendError2(E_AUTH,"SESSION TIMEOUT");
+                 SendError2(E_AUTH,"SESSIONID MATCH ERROR");
             }
         } 
     }
@@ -33,12 +33,12 @@ include_once ('../db/mem.php');
             }
             else
             {
-                SendError2(E_AUTH,"SESSION Decode False");
+                SendError2(E_AUTH,"SESSION Decode False mem_session = $session");
             }
         }
         else
         {
-            SendError2(E_AUTH,"SESSION TIMEOUT");
+            SendError2(E_AUTH,"CANNOT FIND SESSION FROM MEMACHE,sessionid = $sessionid");
         }
          
     }
