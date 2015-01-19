@@ -7,6 +7,7 @@ define('E_RSTR', 3); //
 define('E_OTHER', 4); // 
 define('E_OK',5);//ok
 define('E_MEM',6);// memcache error
+define('E_RED',7);
 
 class Info
 {

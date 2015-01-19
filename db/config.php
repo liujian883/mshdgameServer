@@ -16,4 +16,6 @@ $_config['memcache'] = array('host'=>'10.6.14.167','port'=>'11211');
 
 // tableConst
 $_config['table'] = array('userPet'=>4,'userProps'=>2,'userEquipment'=>6);
-
+//redis
+$_config['redis_host'] = 'localhost';
+$_config['redis_port'] = 6379;
