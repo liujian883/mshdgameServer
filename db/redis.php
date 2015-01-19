@@ -1,10 +1,10 @@
 <?php
 
-include_once 'db.php';
+include_once 'db2.php';
 include_once 'error.php';
 include_once 'config.php';
 
-class RedisStore
+class red 
 {
     private static $_instance = null;
     private  $conn = null;
